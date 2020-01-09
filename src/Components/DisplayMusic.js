@@ -12,19 +12,17 @@ class DisplayMusic extends Component {
     display(){
         if(this.props.value !== null){
             let response =  this.props.value.map((music) =>
-                <div className="musics">
-                    <Music value={music}/>
-                </div>
+                <Music value={music}/>
             );
-
             return <div>{response}</div>;
+
         }else {
             return <div/>
         }
     };
     render() {
         return (
-            <div>
+            <div className="DisplayMusic">
                 {this.display()}
             </div>
         );

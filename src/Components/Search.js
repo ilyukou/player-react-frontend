@@ -18,6 +18,8 @@ class Search extends Component {
         if(query !== undefined &&
             query.length > 0){
 
+            this.setState({response : null});
+
             axios.get(SEARCH_URL+"?query="+query)
                 .then(r => {
                     if(r.data.status === "OK"){
@@ -30,27 +32,17 @@ class Search extends Component {
     render() {
         return (
             <div>
-                <Container >
-                    <Row className="show-grid pt-2" row align-items-center>
-                        <Col>
-                            <InputGroup>
-                                <FormControl
-                                    id="inputQuery"
-                                    type="text"
-                                    name="text"
-                                    onChange={this.onChangeHandler}
-                                    placeholder="Search"
-                                />
-                            </InputGroup>
-                        </Col>
+                <InputGroup>
+                    <FormControl
+                        id="inputQuery"
+                        type="text"
+                        name="text"
+                        onChange={this.onChangeHandler}
+                        placeholder="Search"
+                    />
+                </InputGroup>
 
-                    </Row>
-                    <Row className="show-grid pt-2" row align-items-center>
-                        <Col>
-                            <DisplayMusic value={this.state.response}/>
-                        </Col>
-                    </Row>
-                </Container>
+                <DisplayMusic value={this.state.response}/>
             </div>
         );
     }

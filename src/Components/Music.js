@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {Container, Col, Row, Card} from "react-bootstrap";
-import {DOWNLOAD_FILE,GET_FILE_TYPE} from './APIproperties';
-import axios from 'axios';
+import {Card} from "react-bootstrap";
+import {DOWNLOAD_FILE} from './APIproperties';
 
 class Music extends Component {
     constructor(props) {

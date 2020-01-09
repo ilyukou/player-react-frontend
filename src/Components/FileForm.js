@@ -27,9 +27,7 @@ class FileForm extends Component {
 
     render() {
         return (
-            <Container>
-                <Row className="show-grid pt-2" row align-items-center>
-                    <Col>
+                <div>
                         <InputGroup>
                             <FormControl
                                 type="file"
@@ -37,43 +35,21 @@ class FileForm extends Component {
                                 placeholder="Put the file"
                                 required
                                 onChange={this.onChangeHandler}
-                                accept="zip,
-                                   application/octet-stream,
-                                   application/zip,
-                                   application/x-zip,
-                                   application/x-zip-compressed"
                             />
                         </InputGroup>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
+
                         <Button onClick={this.sendFileToServer}>Send</Button>
-                    </Col>
-                </Row>
-            </Container>
+                </div>
         );
     }
 }
 export default FileForm;
 /*
-<input id="uploadFileInput"
-                       type="file"
-                       name="file"
-                       placeholder="Put the file"
-                       required
-                       onChange={this.onChangeHandler}
-                       accept="zip,
-                       application/octet-stream,
-                       application/zip,
-                       application/x-zip,
-                       application/x-zip-compressed"
-                />
-
-                <button
-                    placeholder="Send"
-                    onClick={this.sendFileToServer}
-                >
-                    <label>Send</label>
-                </button>
- */
+accept="zip,
+                                   application/octet-stream,
+                                   application/zip,
+                                   application/x-zip,
+                                   application/x-xz,
+                                   application/x-7z-compressed,
+                                   application/x-zip-compressed"
+                                   */
