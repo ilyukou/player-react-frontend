@@ -1,5 +1,5 @@
 // Backend API url
-export const BACKEND_API_URL = "http://localhost:8080";
+export const BACKEND_API_URL = "http://192.168.100.33:8080";
 
 // FileController
 const FileControllerUrl = BACKEND_API_URL+"/music";
